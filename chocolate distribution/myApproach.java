@@ -5,7 +5,7 @@ class Solution
         Collections.sort(list);
         int smallest = list.get(n-1),diff = 0;
         if(m == n){
-            return (long)smallest āāāśṅḥ- list.get(0);
+            return (long)smallest - list.get(0);
         }
         if(m == 1){
             return (long)0;
