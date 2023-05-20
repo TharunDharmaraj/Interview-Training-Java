@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int findDuplicate(int[] nums) {
        HashMap<Integer,Integer> duplicate = new HashMap<Integer,Integer>();
