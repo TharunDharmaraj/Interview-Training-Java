@@ -1,6 +1,4 @@
-
-class Compute {
-    
+class approach {
     public void Rearrange(long arr[], long n)
     {
         int i = 0, j = 0;
@@ -18,6 +16,5 @@ class Compute {
                 j++;
             }
         }
-        
     }
 }

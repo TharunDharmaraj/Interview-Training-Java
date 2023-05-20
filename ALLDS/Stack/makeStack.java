@@ -1,28 +1,31 @@
 package ALLDS.Stack;
 
-public class makeStack {
+class makeStack {
     private int capacity;
     private int top = -1;
-    private int[] arr = new int[capacity];
+    private int[] arr;
 
     makeStack(int size) {
         capacity = size;
+        arr = new int[capacity];
     }
 
     public void push(int element) {
         if (!isFull()) {
             arr[++top] = element;
+            System.out.println(element + " Pushed in top " + top);
         } else {
             System.out.println("OVERFLOW ERROR");
+            System.exit(1);
         }
     }
 
-    public int pop() {
+    public void pop() {
         if (!isEmpty()) {
-            return arr[top--];
+            System.out.println(arr[top--] + " Popped!");
         } else {
             System.out.println("UNDERFLOW ERROR");
-            return 1;
+            System.exit(1);
         }
     }
 
@@ -43,16 +46,17 @@ public class makeStack {
     }
 
     public boolean isFull() {
-        if (top == capacity) {
+        if (top + 1 == capacity) {
             return true;
         }
         return false;
     }
 
     public void printStack() {
-        System.out.println("\n");
-        for (int i = 0; i < top; i++) {
-            System.out.print(arr[top + 1] + " ");
+        System.out.println("\n\nStack: ");
+        for (int i = 0; i <= top; i++) {
+            System.out.print(arr[i] + " ");
         }
+        System.out.println("\n");
     }
 }
