@@ -1,5 +1,8 @@
 package ALLDS.BST;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class bstTraversal {
     class Node {
         int data;
@@ -73,11 +76,60 @@ class bstTraversal {
         }
     }
 
+    void levelOrderQueue() {
+        Queue<Node> que = new LinkedList<Node>();
+        que.add(root);
+        while (!que.isEmpty()) {
+            Node temp = que.poll();
+            System.out.print(temp.data + " ");
+            if (temp.left != null) {
+                que.add(temp.left);
+            }
+            if (temp.right != null) {
+                que.add(temp.right);
+            }
+        }
+    }
+
+    void levelOrderHeight() {
+        int h = getHeight(root);
+        for (int i = 1; i <= h; i++) {
+            printCurrentLevel(root,i);
+        }
+    }
+
+    public int getHeight(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int leftHeight = getHeight(root.left);
+            int rightHeight = getHeight(root.right);
+
+            if (leftHeight > rightHeight) {
+                return (leftHeight + 1);
+            } else {
+                return (rightHeight + 1);
+            }
+        }
+    }
+
+    void printCurrentLevel(Node root, int level) {
+        if (root == null)
+            return;
+        if (level == 1)
+            System.out.print(root.data + " ");
+        else if (level > 1) {
+            printCurrentLevel(root.left, level - 1);
+            printCurrentLevel(root.right, level - 1);
+        }
+    }
+
     public static void main(String[] args) {
         bstTraversal tree = new bstTraversal();
         tree.insert(2);
         tree.insert(1);
         tree.insert(3);
-        tree.postOrder();
+        tree.insert(7);
+        tree.levelOrderHeight();
     }
 }
