@@ -94,7 +94,7 @@ class bstTraversal {
     void levelOrderHeight() {
         int h = getHeight(root);
         for (int i = 1; i <= h; i++) {
-            printCurrentLevel(root,i);
+            printCurrentLevel(root, i);
         }
     }
 
