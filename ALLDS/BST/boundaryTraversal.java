@@ -98,6 +98,7 @@ class boundaryTraversal {
         bt.insert(22);
         bt.insert(25);
         bt.insert(21);
+        bt.insert(13);
         bt.printBoundary();
     }
 }
