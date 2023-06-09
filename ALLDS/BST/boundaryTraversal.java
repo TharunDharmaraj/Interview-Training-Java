@@ -102,3 +102,6 @@ class boundaryTraversal {
         bt.printBoundary();
     }
 }
+
+// vertical view :
+// https://www.youtube.com/watch?v=q_a6lpbKJdw
