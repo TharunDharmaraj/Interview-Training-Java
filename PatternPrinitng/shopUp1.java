@@ -15,7 +15,7 @@ public class shopUp1 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         int eachLine = (2 * num) - 1;
-        int left = 0, right = 0;
+        int left = 0;
         for (int i = 0; i <= num; i++) {
             for (int k = left; k > 0; k--) {
                 System.out.print(k);
@@ -23,14 +23,13 @@ public class shopUp1 {
             for (int j = 0; j < eachLine; j++) {
                 System.out.print(0);
             }
-            for (int m = 1; m <= right; m++) {
+            for (int m = 1; m <= left; m++) {
                 if(eachLine < 0 && m == 1){
                     continue;
                 }
                 System.out.print(m);
             }
             left++;
-            right++;
             eachLine = eachLine - 2;
             System.out.println();
         }
