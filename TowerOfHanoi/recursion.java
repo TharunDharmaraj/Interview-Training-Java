@@ -35,18 +35,10 @@ class Recursion {
         while (T-- > 0) {
             Hanoi obj = new Hanoi();
             int N;
-            
             //taking input N
             N = sc.nextInt();
-
             //calling toh() method 
             System.out.println(obj.toh(N, 1, 3, 2));
         }
     }
 }
-
-
-
-
-
-
