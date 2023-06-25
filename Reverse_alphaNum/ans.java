@@ -26,9 +26,8 @@ class ans {
             } else {
                 if (start != end) {
                     reverse(str.substring(start, end));
-                                        System.out.print(ch);
-
-                } else {
+                    System.out.print(ch);
+                }else {
                     System.out.print(ch);
                 }
                 start = i + 1;
