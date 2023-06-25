@@ -5,7 +5,7 @@ class Solution {
         int array[] = new int[len];
         int j= 0;
         for(int i:arr){
-        if(i>0){
+            if(i>0){
                 array[j] = i;
                 j++;
             }
@@ -22,4 +22,4 @@ class Solution {
             arr[i] = array[i];
         }
     }
-}l̥
+}

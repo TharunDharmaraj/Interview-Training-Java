@@ -1,5 +1,4 @@
-import java.util.* ;
-import java.io.*; 
+// LCM(a,b) = a*b/GCD(a,b)
 public class approach {
 	public static int gcd(int a, int b){
 		if(b == 0){
@@ -22,3 +21,5 @@ public class approach {
 		return thisSum;
     }
 }
+
+// LCM(a,b) = a*b/GCD(a,b)

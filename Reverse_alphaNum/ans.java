@@ -2,6 +2,7 @@ package Reverse_alphaNum;
 
 import java.util.Scanner;
 
+// Link same type qn: https://www.geeksforgeeks.org/reverse-a-string-without-affecting-special-characters/
 // Given a sentence containing many words you have to reverse all the alphanumeric characters in each and every word of the sentence.
 // Input:  "my ^&na$me@#$ is123 Mike"
 // Output: "ym ^&an$em@#$ 321si ekiM"
@@ -21,7 +22,8 @@ class ans {
         int start = 0, end = 0;
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (Character.isLetterOrDigit(ch)) {
+            // if (Character.isLetterOrDigit(ch)) {
+            if ((ch<= '9' && ch >='0') || (ch >= 'a' && ch <='z') || (ch >= 'A' && ch <='Z')) {
                 end++;
             } else {
                 if (start != end) {

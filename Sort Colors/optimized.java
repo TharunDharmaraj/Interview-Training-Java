@@ -1,5 +1,7 @@
-class Solution {
-    public void sortColors(int[] nums) {
+import java.util.Arrays;
+
+class optimized {
+    public static void sortColors(int[] nums) {
         int left = 0 , right = nums.length - 1 , mid = 0 ;
         while(mid<=right){
             System.out.println(nums[mid]);
@@ -25,5 +27,10 @@ class Solution {
                 }
             }
         }
+        System.out.println(Arrays.toString(nums));
+    }
+    public static void main(String[] args) {
+        int[] arr = {2,0,2,1,1,0};
+        sortColors(arr);
     }
 }

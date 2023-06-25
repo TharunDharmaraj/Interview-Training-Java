@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class Solution {
-
     public static int connectRopes(int[] lengths, int n) {
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         for (int i : lengths) {
