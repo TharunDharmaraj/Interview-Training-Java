@@ -118,7 +118,43 @@ class LinkedList {
             fast = fast.next.next;
             slow = slow.next;
         }
-        System.out.println("Middle element is "+ slow.data);
+        System.out.println("Middle element is " + slow.data);
+    }
+
+    void detectLoop() {
+        Node slow_p = head, fast_p = head;
+        int flag = 0;
+        while (slow_p != null && fast_p != null
+                && fast_p.next != null) {
+            slow_p = slow_p.next;
+            fast_p = fast_p.next.next;
+            if (slow_p == fast_p) {
+                flag = 1;
+                break;
+
+            }
+        }
+        if (flag == 1) {
+            System.out.println("Loop Found");
+            removeLoop(slow_p, fast_p);
+        } else
+            System.out.println("No Loop");
+    }
+
+    static void removeLoop(Node loop, Node head) {
+        Node ptr1 = loop;
+        Node ptr2 = loop;
+
+        // Count the number of nodes in loop
+        int k = 1, i;
+        Node prevNode = ptr1;
+        while (ptr1.next != ptr2) {
+            // keeping track beforeing moving next
+            prevNode = ptr1;
+            ptr1 = ptr1.next;
+            k++;
+        }
+        prevNode.next = null;
     }
 
     public static void main(String[] args) {
