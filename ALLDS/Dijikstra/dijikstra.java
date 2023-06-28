@@ -1,3 +1,5 @@
+// Article : https://www.programiz.com/dsa/dijkstra-algorithm
+// YT : https://www.youtube.com/watch?v=EFg3u_E6eHU
 package ALLDS.Dijikstra;
 
 class dijkstra {
