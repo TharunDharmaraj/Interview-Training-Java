@@ -1,4 +1,4 @@
-Link: https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/submissions/989377534/
+Link: https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/
 
  A string s is called good if there are no two different characters in s that have the same frequency.
 
