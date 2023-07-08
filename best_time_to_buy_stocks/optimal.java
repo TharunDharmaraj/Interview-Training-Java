@@ -1,10 +1,17 @@
 package best_time_to_buy_stocks;
 
 class Solution {
-      public static void main(String[] args) {
-        String name = "name";
-        char[] nameChar = new char[] {'n','a','m','e'}; 
-        System.out.println("Str:" +name);
-        System.out.println("Char:" +nameChar);
+    public int maxProfit(int[] prices) {
+        int sell = 1 , buy = 0, currentProfit = 0 , maxProfit = 0;
+        while(sell < prices.length){
+            currentProfit = prices[sell] - prices[buy];
+            if(prices[buy] < prices[sell]){
+                maxProfit = Math.max(maxProfit,currentProfit);
+            }else{
+                buy = sell;
+            }
+            sell++;
+        }
+        return maxProfit;
     }
 }
