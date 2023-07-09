@@ -1,0 +1,35 @@
+Link: https://www.codingninjas.com/studio/problem-details/ninja-and-his-secret-information_1235180
+
+Ninja And His Secret Information
+PROBLEM STATEMENT
+Ninja has recently joined the FBI. Ninja got some secret information ‘SECRET_INFORMATION’ which he wants to share with his team. But he can not send this information directly because of the hackers and security threats they pose.
+
+So Ninja decides to encode this ‘SECRET_INFORMATION’ and then send the encoded ‘SECRET_INFORMATION’ to his team members. This way, only his team members can decode this information and thus share it safely.
+
+As Ninja is busy extracting the ‘SECRET_INFORMATION, he asks you for help.
+
+Can you help Ninja and his friends with encoding and decoding the ‘SECRET_INFORMATION’?
+
+Note:
+
+1. The ‘SECRET_INFORMATION’ may contain any possible character out of 256 valid ASCII characters.
+2. While decoding the ‘SECRET_INFORMATION’ do not use class members / global/static variables.
+3. Do not use any inbuilt library method/function for decoding the ‘SECRET_INFORMATION’.
+Input Format:
+The first line of input contains an integer ‘T’ which denotes the number of test cases or queries to be run. Then the test cases follow.
+
+The first and the only line of each test case contains an input string ‘STR’ 
+Output Format :
+For each test case, design an algorithm that returns the encoded and decoded string for each input ‘SECRET_INFORMATION’. The output is “Transmission successful” if decoding the encoded string gives the same string as ‘SECRET_INFORMATION’ else the output is “Transmission failed”. 
+
+The output of each test case will be printed in a separate line.
+Note:
+
+You do not need to print anything; it has already been taken care of. Just implement the given function.
+Constraints:
+1 <= ‘T’ <= 100
+1 <= |SECRET_INFORMATION| <= 5000
+
+Where ‘T’ denotes the total number of test cases and |SECRET_INFORMATION| represents the length of ‘SECRET_INFORMATION’ Ninja has to transfer to his team.
+
+Time Limit: 1 second
