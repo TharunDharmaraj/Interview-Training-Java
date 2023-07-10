@@ -18,3 +18,6 @@ public class Solution {
 		return ans;
 	}
 }
+
+// Time Complexity: O(n*log(n)), where n is length of array
+// Auxiliary Space: O(1)
